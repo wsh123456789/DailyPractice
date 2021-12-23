@@ -1,0 +1,73 @@
+/* pages/coupons/coupons.wxss */
+page{
+    height: 100vh;
+    width: 770rpx;
+    /*background: #f0f0f0;*/
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    align-items: center;
+  }
+  
+  .nav{
+    width: 100vw;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav view{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .nav .on{
+    border-bottom: 2px solid red;
+  }
+  
+  .coupons{
+    /*width: 700rpx;*/
+    width: 100vw;
+    height: 300rpx;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .coupons .top{
+    display: flex;
+  }
+  
+  .coupons .top .type{
+    margin-right: 20rpx;
+    background-color: rgb(229, 255, 0);
+    color: red;
+  }
+  
+  .coupons image{
+    width: 200rpx;
+  }
+  
+  .coupons .money{
+    display: flex;
+    align-items: center;
+  }
+  
+  .coupons .money .Hmoney{
+    color:red;
+    font-size: 22px;
+    margin-right: 10px;
+  }
+  
+  .coupons .money .Mmoney{
+    color: #858282;
+    text-decoration: line-through;
+  }
+  .coupons button{
+      background: red;
+  }

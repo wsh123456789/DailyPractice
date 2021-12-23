@@ -1,0 +1,45 @@
+/* pages/detail/index.wxss */
+page{
+    height: 100vh;
+    background: #f0f0f0;
+}
+.Price{
+    color: red;
+}
+.nav{
+   width: 100vw;
+    height: 100rpx;
+    display: flex;
+    background: #fff;
+}
+.nav view{
+    flex: 1;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+.nav .on{
+    border-bottom: 2px solid red;
+}
+.banner{
+    width: 100vw;
+    margin-top: 2vh;
+    padding-left: 7vw;
+    border: 1px solid #fff;
+}
+.banner .styles{
+   height: 500rpx;
+}
+.banner .styles image{
+    max-height: 100%;
+   max-width: 100%;
+}
+.banner .goodsFont{
+    display: contents;
+    align-items: center;
+    margin-left: 100rpx;
+    line-height: 2;
+}
+.pingjia{
+    color: #cccccc;
+}
