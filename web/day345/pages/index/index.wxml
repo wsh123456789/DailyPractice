@@ -1,0 +1,123 @@
+<!--index.wxml-->
+<view class="navigationBar">
+  <view>天使童装</view>
+  <input type="text" placeholder="请输入搜索关键字" />
+</view>
+
+<swiper indicator-dots="true" indicator-color="#ccc" indicator-active-color="#fff"
+        autoplay="true" interval="2000">
+  <swiper-item wx:for="{{bannersData}}" wx:key="index">
+    <image mode="widthFix" src="{{item.picUrl}}"></image>
+  </swiper-item>
+</swiper>
+
+<view class="classFy">
+  <view wx:for="{{categoryData}}" wx:key="index">
+    <image src="{{item.icon}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<view class="containers">
+  <image mode="widthFix" class="ZhiBo" src="{{ZhiBoImg}}"></image>
+  <!--限时秒杀-->
+  <view class="Tip">
+    <view class="line"></view>
+    <image src="../../images/home/miaosha.png"></image>
+    <view class="text">限时秒杀</view>
+    <view class="line"></view>
+  </view>
+
+  <view class="miaoshaGoods" wx:for="{{miaoshaData}}" data-id="{{item.id}}" wx:key="index" bindtap="goDetail">
+    <image src="{{item.pic}}"></image>
+    <view class="miaoshaDetail">
+      <view class="name">{{item.name}}</view>
+      <view class="timer">剩余时间：{{clock}}</view>
+      <view class="price">
+        <view class="nowPrice">￥{{item.minPrice}}</view>
+        <view class="realPrice">￥{{item.originalPrice}}</view>
+        <button>立即抢</button>
+      </view>
+    </view>
+  </view>
+  <!--爆品推荐-->
+  <view class="Tip">
+      <view class="line"></view>
+      <image src="../../images/home/recommend.png"></image>
+      <view class="text">爆品推荐</view>
+      <view class="line"></view>
+  </view>
+
+  <view class="RecommendStatus">
+    <view class="baopin" wx:for="{{recommendStatusData}}" wx:key="index">
+      <image mode="widthFix" src="{{item.pic}}"></image>
+      <view class="name">{{item.name}}</view>
+      <view class="price">￥{{item.minPrice}}</view>
+    </view>
+  </view>
+  <!--疯狂砍价-->
+  <view class="Tip">
+      <view class="line"></view>
+      <image src="../../images/home/recommend.png"></image>
+      <view class="text">疯狂砍价</view>
+      <view class="line"></view>
+  </view>
+
+  <view class="kanjiablock" wx:for="{{kanJiaData}}" wx:key="index">
+    <view class="kanjia">
+      <image mode="widthFix" src="{{item.pic}}"></image>
+      <view class="text">
+        <view class="name">{{item.name}}</view>
+        <view class="jieshao">{{item.characteristic}}</view>
+        <view>进度</view>
+        <view class="price">
+          <view class="nowPrice">￥{{item.minPrice}}</view>
+          <view class="realPrice">￥{{item.originalPrice}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="btn"><button>砍价</button></view>
+  </view>
+  <!--全民拼团-->
+  <view class="Tip">
+      <view class="line"></view>
+      <image src="../../images/home/pintuan.png"></image>
+      <view class="text">全民拼团</view>
+      <view class="line"></view>
+  </view>
+
+  <view class="pintuan" wx:for="{{pinTuanData}}" wx:key="index">
+    <view class="img"><image src="{{item.pic}}"></image></view>
+    <view class="text">
+      <view>{{item.name}}</view>
+      <view class="jieshao">{{item.characteristic}}</view>
+      <view class="price">
+        <view class="nowPrice">￥{{item.minPrice}}</view>
+        <view class="realPrice">￥{{item.originalPrice}}</view>
+        <button>砍价</button>
+      </view>
+      
+    </view>
+  </view>
+  <!--商品列表-->
+  <view class="Tip">
+      <view class="line"></view>
+      <image src="../../images/home/goodslist.png"></image>
+      <view class="text">商品列表</view>
+      <view class="line"></view>
+  </view>
+
+  <view class="allGoods">
+    <view class="goodsOne" wx:for="{{goodsList}}" wx:key="index">
+      <image src="{{item.pic}}"></image>
+      <view class="goodsName">{{item.name}}</view>
+      <view class="goodsPrice">￥{{item.minPrice}}</view>
+    </view>
+  </view>
+  <!--触底提示-->
+  <view class="Tip" wx:if="{{flag}}">
+      <view class="line"></view>
+      <view class="text">没有更多啦</view>
+      <view class="line"></view>
+  </view>
+
+</view>

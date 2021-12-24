@@ -1,0 +1,34 @@
+<!--pages/shop-cart/shop-cart.wxml-->
+<view class="emptyCar" wx:if="{{!hasGoods}}">
+  <image src="../../images/car.png"></image>
+  <view class="text">购物车空空如也</view>
+  <view class="btn" bindtap="goIndex" >去逛逛</view>
+</view>
+
+<view class="car" wx:if="{{hasGoods}}" wx:key="index">
+  <view class="goodsOne" wx:for="{{carGoods}}" wx:key="index">
+    <view class="title">其他</view>
+    <view class="goodsBox">
+
+      <view class="che">
+        <switch checked="{{selectedArr[index]}}" bindchange="tabSwitch" data-index="{{index}}"></switch>
+      </view>
+      <image class="img" src="{{item.pic}}"></image>
+      <view class="name">
+        <view style="margin-bottom: 50rpx;">{{item.name}}</view>
+        <view style="color: red;">￥{{item.price}}</view>
+      </view>
+      <view class="count">
+        <view class="btn" bindtap="minusCount" data-index="{{index}}">-</view>
+        <view class="num">{{item.number}}</view>
+        <view class="btn" bindtap="addCount" data-index="{{index}}">+</view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class="allPrice" wx:if="{{hasGoods}}">
+  <view class="price">总价：￥{{allPrice}}</view>
+  <view class="btns">去结算</view>
+</view>

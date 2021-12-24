@@ -1,0 +1,58 @@
+<!--pages/detail/detail.wxml-->
+<view class="nav" >
+  <view class="{{curIndex==index? 'on' : ''}}"  data-ind="{{index}}" bindtap="tab" wx:for="{{detailNav}}" wx:key="index">{{item}}
+  </view>
+</view>
+
+<scroll-view scroll-y="true" scroll-top="{{myt}}" bindscroll="myScroll">
+  <view class="list">
+    <view class="banner">
+        <swiper autoplay="true" interval="2000">
+          <swiper-item wx:for="{{bannerData}}" wx:key="index">
+            <image class="img" mode="widthFix" src="{{item}}"></image>
+          </swiper-item>  
+        </swiper>
+      </view>
+      <view>{{goodsInfo.name}}</view>
+      <view class="price">
+        <view class="nowPrice">￥{{goodsInfo.minPrice}}</view>
+        <view class="realPrice">￥{{goodsInfo.originalPrice}}</view>
+      </view>
+      <view class="charater">{{goodsInfo.characteristic}}</view>
+  </view>
+  
+  <view class="list">
+    <view class="spDetail">
+        <view class="title"> 
+          <view class="line">|</view>
+          <view class="text">商品详情</view>
+        </view>
+        
+        <image wx:for="{{detailImgs}}" wx:key="index" src="{{item}}"></image>
+      </view>
+  </view> 
+</scroll-view>
+<!--购物车部分-->
+<view class="footer">
+  <view class="car">
+      <image src="../../images/nav/cart-off.png"></image>
+      <view class="text">购物车</view>
+  </view>
+  <view class="btn1" bindtap="addCar">加入购物车</view>
+  <view class="btn2">立即购买</view>
+</view>
+
+<!--购物车展开部分-->
+<view class="carBox" animation="{{myani}}">
+  <view class="box1">
+    <image mode="widthFix" src="{{goodsInfo.pic}}"></image>
+    <view class="box2">
+      <view class="p1">{{goodsInfo.name}}</view>
+      <view class="p2">￥{{goodsInfo.minPrice}}</view>
+    </view>
+  </view>
+
+  <view class="close" bindtap="closeCar">⊗</view>
+  <view class="addCar2" bindtap="realAddCar">加入购物车</view>
+</view>
+

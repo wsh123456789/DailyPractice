@@ -1,0 +1,94 @@
+/* pages/shop-cart/shop-cart.wxss */
+.emptyCar{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyCar .text{
+  color: rgb(100, 100, 100);
+  padding: 20px;
+}
+
+.emptyCar .btn{
+  width: 150rpx;
+  font-weight: 800;
+  height: 50rpx;
+  background: rgb(231, 35, 35);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 5px;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.car{
+  height: 92vh;
+  background: rgb(236, 230, 230);
+}
+.car .goodsBox{
+  width: 700rpx;
+  height: 200rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 25rpx;
+}
+
+.car .goodsBox .img{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.car .goodsBox .count{
+  display: flex;
+  /*justify-content: space-between;*/
+  justify-content: space-around;
+  align-items: center;
+  width: 100rpx;
+}
+
+.car .goodsBox .count .btn{
+  display: block;
+  width: 90rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-weight: 800;
+  align-items: center;
+  background: rgb(236, 230, 230);
+}
+
+.car .goodsBox .num{
+  margin: 15rpx;
+}
+
+.allPrice{
+  width: 650rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allPrice .price{
+  color: rgb(255, 140, 0);
+  font-size: large;
+
+}
+
+.allPrice .btns{
+  width: 100rpx;
+  height: 70rpx;
+  background: rgb(231, 35, 35);
+  color: #fff;
+  border-radius: 35rpx;
+  padding: 0 15px;
+  line-height: 70rpx;
+  margin-top: 5px;
+}
