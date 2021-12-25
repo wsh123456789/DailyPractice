@@ -1,0 +1,22 @@
+<!--pages/coupons/coupons.wxml-->
+<view class="nav" >
+  <view class="{{curIndex==index? 'on' : ''}}" data-ind="{{index}}" bindtap="tab" wx:for="{{couponsNav}}" wx:key="index">{{item}}
+  </view>
+</view>
+<view wx:if="{{curIndex==0 ? true : false}}">
+    <view class="coupons" wx:for="{{couponsList}}" wx:key="index">
+      <image mode="widthFix" src="../../images/icon/coupons-active.svg"></image>
+      <view>
+        <view class="top">
+          <view class="type">{{item.type}}</view>
+          <view>满减</view>
+        </view>   
+        <view class="money"> 
+          <view class="Hmoney">￥{{item.moneyMin}}</view>
+          <view class="Mmoney">满{{item.moneyHreshold}}</view>
+        </view>
+        <button size="mini" style="color: rgb(241, 24, 24);">立即领取</button>
+      </view>
+    </view>
+</view>
+

@@ -1,0 +1,264 @@
+/* pages/detail/detail.wxss */
+.nav{
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.nav view{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.nav .on{
+  border-bottom: 2px solid red;
+}
+
+scroll-view{
+  height: 100vh;
+}
+
+.banner{
+  width: 100vw;
+  height: 850rpx;
+  margin-top: 100rpx;
+}
+
+.banner .share{
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*position: relative;*/
+  position: fixed;
+  right: 0;
+}
+
+.banner .share image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.banner .share button{
+  width: 100rpx;
+  height: 100rpx; 
+  position: absolute;
+  opacity: 0;
+}
+
+.banner swiper{
+  width: 700rpx;
+  height: 800rpx;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: #eeebeb;
+}
+
+.price{
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+}
+
+.price .nowPrice{
+  font-size: 18px;
+  color: red;
+}
+
+.price .realPrice{
+  color: #ccc;
+  text-decoration: line-through;
+  padding: 0 10px;
+}
+
+.charater{
+  color: rgb(160, 158, 158);
+}
+
+.banner .img{
+  width: 700rpx;
+  height: 800rpx;
+
+}
+
+.spDetail .title{
+  display: flex;
+  align-items: center;
+  padding-left: 10rpx;
+}
+
+.spDetail .detailImg{
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.spDetail .line{
+  color: red;
+  font-size: 22px;
+}
+
+.spDetail .text{
+  font-size: 20px;
+}
+/*购物车*/
+.footer{
+  width: 100vw;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.footer .car{
+  display: flex;
+  align-items: center;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.footer .car .text{
+  padding: 20rpx;
+}
+
+.footer .car image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.footer .btn1{
+  width: 200rpx;
+  height: 80rpx;
+  background: rgb(248, 195, 18);
+  border-radius: 40px 0 0 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  line-height: 80rpx;
+}
+
+.footer .btn2{
+  width: 200rpx;
+  height: 80rpx;
+  background: red;
+  border-radius: 0 40px 40px 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  line-height: 80rpx;
+}
+
+.carBox{
+  width: 100vw;
+  /*min-height: 200rpx;*/
+  height: 500rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  border-radius: 10px 10px 0 0;
+  z-index: 1100;
+  transform: translateY(250px);
+}
+
+.carBox .box1 {
+  width: 100vw;
+  height: 150rpx;
+  display: flex;
+}
+
+.carBox .box1 image{
+  width: 180rpx;
+  padding: 50rpx;
+}
+
+.carBox .box2 {
+  display: flex;
+  align-items: center;
+}
+
+.carBox .box1 .p1{
+  position: fixed;
+  top: 20rpx;
+  width: 100vw;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.carBox .box1 .p2{
+  margin-top: 20rpx;
+}
+
+.count{
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 125rpx;
+  left: 80rpx;
+}
+
+.count .num{
+  width: 200rpx;
+  height: 50rpx;
+}
+
+.count .add{
+  display: flex
+}
+
+.count .add .btn3{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgb(167, 164, 164);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count .add view{
+  display: flex;
+  width: 50rpx;
+  justify-content: center;
+  line-height: 50rpx;
+  background: #fff;
+}
+
+.carBox .close{
+  position: fixed;
+  top: 20rpx;
+  right: 20rpx;
+  z-index: 1100;
+  font-size: 20px;
+}
+
+.carBox .addCar2{
+  width: 650rpx;
+  height: 80rpx;
+  background: red;
+  display: flex;
+  justify-content: center;
+  line-height: 80rpx;
+  font-size: 15px;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 50rpx;
+}

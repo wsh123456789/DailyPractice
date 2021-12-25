@@ -1,0 +1,306 @@
+/**index.wxss**/
+.navigationBar{
+  height: 150rpx;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+.navigationBar view{
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+.navigationBar input{
+  width: 300rpx;
+  height: 60rpx;
+  /*background: rgb(236, 234, 234);*/
+  border-radius: 5px;
+}
+
+swiper{
+  width: 100vm;
+  margin-top: 150rpx;
+  margin-left: 55rpx;
+}
+
+swiper image{
+  width: 100vm;
+}
+
+.classFy{
+  width: 700rpx;
+  background: #fff;
+  margin: 20rpx auto;
+  box-shadow: 0 0 10px 5px rgb(138, 136, 136);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.classFy view{
+  width: 800rpx;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.classFy view image{
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.containers{
+  background: #fff;
+  width: 100vm;
+}
+
+.ZhiBo{
+  width: 700rpx;
+  border-radius: 5px;
+  margin: 20px auto;
+  display: block;
+}
+
+.Tip{
+  width: 700rpx;
+  margin: 40rpx auto;
+  display: flex;
+  align-items: center;
+}
+
+.Tip .line{
+  height: 1px;
+  background: #ccc;
+  flex: 1;
+}
+
+.Tip image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 10rpx;
+}
+
+.Tip .text{
+  font-size: 12px;
+  margin-right:10rpx;
+}
+
+.miaoshaGoods{
+  display: flex;
+  align-items: center;
+}
+
+.miaoshaGoods image{
+  width: 300rpx;
+  height: 300rpx;
+  padding: 0 20px;
+}
+
+.miaoshaGoods .timer{
+  color: red;
+  font-size: 12px;
+}
+
+.miaoshaGoods .price{
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+}
+
+.miaoshaGoods .price .nowPrice{
+  font-size: 18px;
+  color: red;
+}
+
+.miaoshaGoods .price .realPrice{
+  color: #ccc;
+  text-decoration: line-through;
+  padding: 0 10px;
+}
+
+.miaoshaGoods .price button{
+  width: 180rpx;
+  height: 70rpx;
+  background: rgb(231, 35, 35);
+  color: #fff;
+  border-radius: 35rpx;
+  padding: 0 15px;
+  line-height: 70rpx;
+  margin-left: 5px;
+}
+
+.RecommendStatus{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.RecommendStatus .baopin{
+  width: 300rpx;
+  height: 400rpx;
+  border: 1px solid #ccc;
+  margin: 20px 20px;
+}
+
+.RecommendStatus .baopin image{
+  width: 300rpx;
+}
+
+.RecommendStatus .baopin .name{
+  width: 300rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.RecommendStatus .baopin .price{
+  color: red;
+}
+
+.kanjia{
+  display: flex;
+  margin: 10px 10px;
+}
+
+.kanjia image{
+  width: 300rpx;
+}
+
+.kanjia .text{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  justify-content: center;
+}
+
+.kanjia .text .jieshao{
+  color: #ccc;
+}
+
+/*.kanjia .text .price{
+  display: flex;
+}*/
+
+.kanjia .text .price{
+  display: flex;
+  height: 50rpx;
+  align-items: center;
+}
+
+.kanjia .text .price .nowPrice{
+  font-size: 18px;
+  color: red;
+}
+
+.kanjia .text .price .realPrice{
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.kanjiablock .btn{
+  width: 100vw;
+  height: 50rpx;
+}
+.kanjiablock .btn button{
+  width: 200rpx;
+  float: right;
+  height: 70rpx;
+  background: rgb(231, 35, 35);
+  color: #fff;
+  border-radius: 35rpx;
+  padding: 0 15px;
+  line-height: 70rpx;
+}
+
+.pintuan{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pintuan .img{
+  width: 100vw;
+  height: 200rpx;
+  margin: 0 auto;
+}
+
+.pintuan .img image{
+  width: 700rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.pintuan .text{
+  width: 700rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.pintuan .text .jieshao{
+  color: #ccc;
+}
+
+.pintuan .text .price{
+  display: flex;
+  height: 50rpx;
+  align-items: center;
+}
+
+.pintuan .text .price .nowPrice{
+  font-size: 18px;
+  color: red;
+}
+
+.pintuan .text .price .realPrice{
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.pintuan .text .price button{
+  width: 200rpx;
+  float: right;
+  height: 70rpx;
+  background: rgb(231, 35, 35);
+  color: #fff;
+  border-radius: 35rpx;
+  padding: 0 15px;
+  line-height: 70rpx;
+}
+
+/*商品列表*/
+.allGoods{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.allGoods .goodsOne{
+  border: 1px solid #ccc;
+  margin-bottom: 40rpx;
+  padding: 20rpx;
+}
+
+.allGoods .goodsOne image{
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.allGoods .goodsOne .goodsName{
+  width: 300rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.allGoods .goodsOne .goodsPrice{
+  color: red;
+}

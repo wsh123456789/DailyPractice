@@ -1,0 +1,33 @@
+<!--pages/my/my.wxml-->
+<view class="user">
+  <open-data type="userAvatarUrl" class="avatar"></open-data>
+  <open-data  type="userNickName" class="name"></open-data>
+</view>
+
+<view class="order">
+  <view>我的订单</view>
+  <view style="color: darkgrey;" >更多></view>
+</view>
+
+<view class="allFun">
+  <view class="one">
+    <image src="../../images/order/topay.png"></image>
+    <view>待付款</view>
+  </view>
+  <view class="one">
+    <image src="../../images/order/fahuo.png"></image>
+    <view>待发货</view>
+  </view>
+  <view class="one">
+    <image src="../../images/order/shouhuo.png"></image>
+    <view>待收货</view>
+  </view>
+  <view class="one">
+    <image src="../../images/order/pj.png"></image>
+    <view>待评价</view>
+  </view>
+  <view class="one">
+    <image src="../../images/order/shouhou.png"></image>
+    <view>售后</view>
+  </view>
+</view>

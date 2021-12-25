@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/shop-cart/shop-cart",
+    "pages/detail/detail",
+    "pages/coupons/coupons",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/category/category"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ff00",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./images/nav/home-off.png",
+      "selectedIconPath": "./images/nav/home-on.png"
+    },
+    {
+      "pagePath": "pages/category/category",
+      "text": "分类",
+      "iconPath": "./images/nav/fl-off.png",
+      "selectedIconPath": "./images/nav/fl-on.png"
+    },
+    {
+      "pagePath": "pages/coupons/coupons",
+      "text": "优惠券",
+      "iconPath": "./images/nav/coupon-off.png",
+      "selectedIconPath": "./images/nav/coupon-on.png"
+    },
+    {
+      "pagePath": "pages/shop-cart/shop-cart",
+      "text": "购物车",
+      "iconPath": "./images/nav/cart-off.png",
+      "selectedIconPath": "./images/nav/cart-on.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "./images/nav/my-off.png",
+      "selectedIconPath": "./images/nav/my-on.png"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

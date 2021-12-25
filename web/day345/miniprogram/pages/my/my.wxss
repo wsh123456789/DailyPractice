@@ -1,0 +1,46 @@
+/* pages/my/my.wxss */
+.user{
+  width: 90vw;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  margin: 20rpx auto;
+}
+
+.user .avatar{
+  width: 150rpx;
+  height: 150rpx;
+  padding: 25rpx;
+}
+
+.order{
+  width: 90vw;
+  margin: 0 auto;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allFun{
+  width: 100vw;
+  height: 150rpx;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.allFun .one{
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.allFun .one image{
+  width: 60rpx;
+  height: 60rpx;
+}
