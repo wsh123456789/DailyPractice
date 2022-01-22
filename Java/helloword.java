@@ -14,6 +14,7 @@ public class helloword {
      */
     public static void main(String[] args){
         // 这是输出语句，“ ” 里边的内容是可以改变的
-        System.out.println("Hello Word!");
+        System.out.println("HelloWord!");
     }
 }
+ 
