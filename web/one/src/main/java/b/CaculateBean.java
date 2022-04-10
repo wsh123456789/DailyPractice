@@ -25,19 +25,12 @@ public class CaculateBean {
 		this.op = op;
 	}
 	
-	public int getResult() { 
-		if("+".equals(op))   
-			result = n1 + n2;
-		else if("-".equals(op))
-			result = n1 - n2;
-		else if("*".equals(op))
-			result = n1 * n2;
-		else if("/".equals(op))
-			result = n1 / n2;
-		else if("%".equals(op))
-			result = n1 % n2;
-		return result;
+	public void setResult(int  result) { 
+		this.result=result;
+		
 	}
-	
+	 public int getResult() {
+		 return result;
+	 }
 	
 }
