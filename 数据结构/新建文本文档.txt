@@ -1,0 +1,153 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<String.h>
+#define OK 1
+#define ERROR 0
+#define OVERFLOW -2
+#define NULL 0
+typedef int Status;
+typedef int ElemType;
+typedef struct LNode{
+	ElemType      data;
+	struct LNode  *next;
+}LNode, *LinkList;
+
+//单链表的初始化
+Status InitList_L(LinkList &L){
+	L = (LinkList)malloc(sizeof(LNode));
+	if(!L) exit(OVERFLOW);
+	L->next = NULL;
+	return OK;
+}
+
+//单链表中元素的获取
+Status GetElem_L(LinkList L,int i,ElemType &e){
+	LinkList p;
+	int j = 1;
+	p=L->next;
+	while(p&&j<i){
+		p = p->next;
+		j++;
+	}
+	if(!p||j>i)
+	return ERROR;
+	e = p->data;
+	return OK;
+} 
+
+//单链表的插入
+Status ListInsert_L(LinkList &L,int i,ElemType e){
+	LinkList p,s;
+	int j=0;
+	p = L;
+	while(p&&j<i-1){
+		p = p->next;
+		j++;
+	}
+	if(!p||j>i-1) 
+	return ERROR;
+	s = (LinkList)malloc(sizeof(LNode));
+	if(!s) exit(OVERFLOW);
+	s->data = e;
+	s->next = p->next;
+	p->next = s;
+	return OK;
+} 
+
+//单链表的删除
+Status ListDelete_L(LinkList &L,int i,ElemType &e){
+	LinkList p,q;
+	int j = 0;
+	p = L;
+	while(p->next&&j<i-1){
+	p = p->next;
+	++j;
+	}
+	    if(!(p->next)||j>i-1)
+	    return ERROR;
+		q = p->next;
+		p->next = q->next;
+		e = q->data;
+		free(q);
+		return OK;
+} 
+
+//单链表的遍历
+void ListTraverse_L(LinkList L){
+	LinkList p;
+	p = L->next;
+	while(p){
+		printf("%d\t",p->data);
+		p = p->next;
+	}
+	printf("\n");
+} 
+
+//单链表的创建(头部插入法)
+void CreateList_L(LinkList &L,int n){
+	int i;
+	LinkList p;
+	for(i=n;i>=1;--i){
+		p = (LinkList)malloc(sizeof(LNode));
+		if(!p) exit(OVERFLOW);
+		printf("请输入第%d个数据元素：\n",i);
+		scanf("%d",&p->data);
+		p->next = L->next;
+		L->next = p;
+	}
+}
+
+//单链表的合并
+void MergeList_L(LinkList La,LinkList Lb,LinkList &Lc){
+	LinkList pa,pb,pc;
+	pa = La->next;
+	pb = Lb->next;
+	Lc = La;
+	pc = La;
+	while(pa&&pb){
+		if(pa->data<=pb->data){
+			pc->next = pa;
+			pc = pa;
+			pa = pa->next;
+		}
+		else{
+			pc->next = pb;
+			pc = pb;
+			pb = pb->next;
+		}
+	}
+	pc->next = pa?pa:pb;
+	free(Lb);
+}
+
+int main(){
+	LinkList L;
+	ElemType e;
+	InitList_L(L);
+	printf("请输入你的链表长度\n");
+	int i;
+	ElemType j;
+	scanf("%d",&i);
+	CreateList_L(L,i); 
+	printf("遍历一遍单链表:\n"); 
+	ListTraverse_L(L);
+	printf("请输入你想插入的位置\n");
+    scanf("%d",&i);
+    printf("请输入你想插入的数据\n");
+    scanf("%d",&j);
+	ListInsert_L(L,i,j);
+	printf("插入数据之后遍历表\n"); 
+	ListTraverse_L(L);
+	printf("请输入你想删除的位置\n");
+	scanf("%d",&i); 
+	ListDelete_L(L,i,e);
+	printf("删除后遍历表\n"); 
+	ListTraverse_L(L);
+	printf("请输入你想获取的数据的位置\n");
+	scanf("%d",&i); 
+	printf("获取元素为：\n");
+	GetElem_L(L,i,e);
+	printf("%d",e);
+	printf("\n");
+	return 0;
+}

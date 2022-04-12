@@ -1,0 +1,8 @@
+ADT  Matrix{
+	数据对象：D={a[i][j], i, j | a[i][j]是任意实数，i, j是正整数}
+	数据关系：R={<a[i][j],i,j>|a[i][j]是矩阵中的元素，i是矩阵的行数，j是矩阵的列数}
+	数据操作{
+	Creat_Matrix(int i,int j);
+	操作结果：构造一个矩阵
+	
+}

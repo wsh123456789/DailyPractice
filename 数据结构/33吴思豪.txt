@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+struct Complex{
+	double a;
+	double b;
+};
+void creat_complex(struct Complex *com,double a,double b){
+	com->a = a;
+	com->b = b;
+}
+void Add(struct Complex *com,struct Complex *com1,struct Complex *com2){
+	com->a = com1->a + com2->a;
+	com->b = com1->b + com2->b;
+}
+void Minus(struct Complex *com,struct Complex com1,struct Complex com2){
+	com->a = com1.a - com2.a;
+	com->b = com1.b - com2.b;
+}
+void Muleiply(struct Complex *com,struct Complex com1,struct Complex com2){
+	com->a = com1.a*com2.a-com1.b*com2.b;
+	com->b = com1.b*com2.a + com1.a*com2.b;
+}
+void Divide(struct Complex *z,struct Complex z1,struct Complex z2){
+	if(z2.a==0&&z2.b==0)
+		cout<<"除数为零"; 
+	else{
+		z->a = (z1.a*z2.a+z1.b*z2.b)/(z2.a*z2.a+z2.b*z2.b);
+		z->b = (z1.b*z2.a-z1.a*z2.b)/(z2.a*z2.a+z2.b*z2.b);
+	}
+}
+double GetReal(struct Complex z){
+	return z.a;
+}
+double GetImag(struct Complex z){
+
+	return z.b;
+}
+void printComplex(struct Complex *z){
+	if(z->b == 0)
+		cout<<z->a;
+	else if(z->a == 0)
+		cout<<z->b<<"i";
+	else if(z->b>0)
+		cout<<z->a<<'+'<<z->b<<'i';
+	else
+		cout<<z->a<<'-'<<z->b<<'i';
+} 
+int main(){
+	struct Complex z,z1,z2;
+	creat_complex(&z,3.0,3.0);
+	creat_complex(&z1,1.0,1.0);
+	creat_complex(&z2,2.0,2.0);
+	Add(&z,&z1,&z2);
+	printComplex(&z); 
+	return 0;
+}
