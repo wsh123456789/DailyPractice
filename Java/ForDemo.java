@@ -1,4 +1,4 @@
-/*
+package practice;/*
     输出所有的水仙花数并统计个数
  */
 import java.util.Scanner;

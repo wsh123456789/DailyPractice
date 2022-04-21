@@ -1,4 +1,4 @@
-/*
+package practice;/*
     输入一个数字，输出对应的星期数
  */
 import java.util.Scanner;

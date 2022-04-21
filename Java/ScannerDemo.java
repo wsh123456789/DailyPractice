@@ -1,3 +1,5 @@
+package practice;
+
 import java.util.Scanner;
 /*
     录入三个数字，比较大小，输出最大的值

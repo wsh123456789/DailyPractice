@@ -1,4 +1,4 @@
-//随机生成一个1-100之间的数字，有十次猜数机会，分别提示猜对了，猜大了，猜小了，失败了提示语
+package practice;//随机生成一个1-100之间的数字，有十次猜数机会，分别提示猜对了，猜大了，猜小了，失败了提示语
 
 import java.util.Random;
 import java.util.Scanner;
