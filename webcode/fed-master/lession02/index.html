@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="css/demo.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      /*font-family: Arial, "\5b8b\4f53", sans-serif;*/
+      font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      /*font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', sans-serif;*/
+      font-size: 14px;
+      line-height: 30px;
+      color: #0057ff;
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <script src="https://g.csdnimg.cn/csdn-nps/1.1.1/csdn-nps.js?a=1" async></script>
+  <script src="https://g.csdnimg.cn/csdn-nps/1.1.1/csdn-nps.js?a=2" defer></script>
+  <script>
+    // html 架构
+    // css 装饰
+    // js 行为
+
+    // document.onload = function () {
+    //   // const myCanvas = document.getElementById('myCanvas');
+    //
+    //   const el = document.getElementById('el');
+    //   // elDom.innerHTML = 456;
+    //   console.log(el.innerHTML, 2222);
+    //
+    //   // elDom.innerHTML = '222';
+    //
+    // }
+
+    window.onload = (event) => {
+      const el = document.getElementById('el');
+      // elDom.innerHTML = 456;
+      console.log(el.innerHTML, 2222);
+
+      el.innerHTML = 456;
+    };
+
+    // window如何渲染页面的逻辑
+    // https://www.csdn.net/tags/MtTaMgysMDg0NTUyLWJsb2cO0O0O.html
+
+    // ie 退役。微软 全面转向了Webkit
+
+    // 《Webkit技术内幕》
+
+    // $(function(){}) 和 $(document).ready(function(){})
+
+    // JS可以操作DOM来修改DOM结构，可以操作CSSOM来修改节点样式，
+    // 这就导致了浏览器在遇到< script>标签时，DOM构建将暂停，直至脚本完成执行，然后继续构建DOM。
+    // 如果脚本是外部的，会等待脚本下载完毕，再继续解析文档。
+
+    // dom tree => cssom tree => dom + css : render tree => 重绘和回流(Layout reflow) => 绘制和栅格化
+
+
+    // js 单线程 ，浏览器不是单线程的
+
+    //     主要是介绍浏览器的渲染过程
+    //
+    //    （一）浏览器渲染进程包含1、解析HTML文件和CSS文件，加载图片等资源文件，渲染成用户看到的页面；2、执行解析js文件脚本代码。
+    //
+    //    （二）整个过程浏览器会开启多个线程协作完成，包括：GUI渲染线程，JS引擎线程，事件触发线程，定时器触发线程，异步HTTP请求线程。
+    //
+    //    （三）其中GUI渲染线程和JS引擎线程是相互排斥的，因为JS引擎线程在执行的时候有可能会发生重绘和回流。
+
+
+    // 《js权威指南》 《node深入浅出》
+
+    // 1 通读一遍
+    // 2 参考书
+    // 《java编程思想》
+
+  </script>
+</head>
+<body>
+
+  <div id="el">123</div>
+
+  <!--<canvas id="myCanvas" />-->
+  <script src="https://g.csdnimg.cn/csdn-nps/1.1.1/csdn-nps.js"></script>
+</body>
+</html>

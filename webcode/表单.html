@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title> </title>
+
+    <meta charset="utf-8">
+
+    <style type="text/css">
+
+        #all_light {
+
+            opacity: 0.8;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: #000;
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            display: none; 
+
+            z-index: 2;
+
+        }
+
+        #contes { 
+
+            width: 500px; 
+
+            height: 500px; 
+
+            background: #fff; 
+
+            display: none; 
+
+            z-index: 2;
+
+            position: absolute;
+
+            top: 100px;
+
+            left: 400px; 
+
+        }
+
+        input{
+
+            margin-bottom: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- 点击按钮 -->
+
+<a href="javascript:void(0)" onclick="add()">
+
+    添加
+
+</a>
+<div id="all_light">
+
+</div>
+
+<!--  弹框的div -->
+
+<div id="contes" style="">
+
+    <div style="width:500px;height:40px;">
+
+        添加用户
+
+        <hr>
+
+        <form style=" margin-left: 100px;">
+
+            用户名：<input type="text" value="" name="" ><br>
+
+            密&nbsp;&nbsp;&nbsp;码：<input type="password" value="" name=""><br>
+
+            <input type="submit" value="提交">
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+</body>
+
+<script>
+
+    function add() {
+
+        document.getElementById('all_light').style.display = 'block';
+
+        document.getElementById('contes').style.display = 'block';
+
+    }
+
+</script>
+
+</html>

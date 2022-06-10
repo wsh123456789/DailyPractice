@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    body {
+      /*background: url("./bg002.gif") repeat;*/
+    }
+
+    div {
+      background: #0057ff;
+    }
+
+    menu {
+      font-size: 20px;
+    }
+    span {
+      font-size: 30px;
+      background: #B30000;
+    }
+
+    .menu-item {
+      font-size: 50px;
+      border: #b32a52;
+      background-size: contain;
+    }
+
+    /* 选择器：就近原则*/
+    /* 盒子模型 */
+    /* 2d,3d,动画*/
+    /* 定位 */
+    /* 视网膜屏 100px 200px h5 */
+    /* flex https://blog.csdn.net/qq_29689343/article/details/112556133
+       felx 布局： 写的少
+       抽象，写的少
+       正则表达式
+       ^= *= $=
+       https://www.runoob.com/note/34568
+    */
+
+
+    #nav menu span {
+      font-size: 60px;
+    }
+
+    main header :first-child {
+      background: aliceblue;
+      width: 1000px;
+      height: 200px;
+      border-radius: 100px;
+      text-shadow: 2px 2px;
+      background-image: linear-gradient(#FF0000,#FFF200, #1E9600);
+    }
+    main header :last-child {
+      background: aquamarine;
+      background-image: linear-gradient(to right bottom , #FF0000,#FFF200, #1E9600);
+      box-shadow: 10px 10px 5px grey;
+    }
+
+    main header .menu-item .content {
+      color: #1E9600;
+    }
+
+
+    /**
+
+    **/
+    /*main {*/
+      /*header {*/
+        /*&:first-child {*/
+          /*background: aliceblue;*/
+          /*width: 1000px;*/
+          /*height: 200px;*/
+          /*border-radius: 100px;*/
+          /*text-shadow: 2px 2px;*/
+          /*background-image: linear-gradient(#FF0000,#FFF200, #1E9600);*/
+        /*}*/
+        /*&:last-child {*/
+          /*background: aquamarine;*/
+          /*background-image: linear-gradient(to right bottom , #FF0000,#FFF200, #1E9600);*/
+          /*box-shadow: 10px 10px 5px grey;*/
+        /*}*/
+        /*.menu-item {*/
+          /*.content {*/
+            /*color: #1E9600;*/
+          /*}*/
+        /*}*/
+      /*}*/
+    /*}*/
+
+    /*
+      程序员写的代码 => 编译(css预处理器：less，sass，postcss，stylus) => 浏览器认识的代码
+      https://less.bootcss.com
+    */
+
+    span[data-id='3'] {
+      color: #B30000;
+    }
+
+    .footer {
+      /*position: absolute; !*relative, fixed*!*/
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 0;
+      background: #1E9600;
+    }
+
+    .footer {
+      /*position: absolute; !*relative, fixed*!*/
+      position: absolute;
+      top: 100px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 10; /**10,20,30,40,50 ,100, 200, 300, 400, 9999*/
+      background: #1E9600;
+    }
+
+    .menu-container {
+      position: relative;
+      top: 50px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      background: #960400;
+    }
+
+    /**
+      1 absolute 相对于body
+      2 menu absolute > footer absolute
+
+      3 menu relative > footer absolute
+       relative : dom
+
+      定位为relative的元素，虽然可以脱离正常的文档流进行移动，但是其本身在文档流中占据的位置仍然保留。
+      relative元素进行移动是相对于其本身原来位置进行移动，并且当它移动之后，它仍然占据着原来位置的空间。
+      定位为absolute的元素，也是脱离正常的文档流，并且其本身在文档流中占据的位置不再保留。
+
+      position: fixed; 的元素是相对于视口定位的，这意味着即使滚动页面，它也始终位于同一位置
+
+      box-sizing : border-box;
+      https://necolas.github.io/normalize.css/
+
+    */
+
+    /*opacity 0~1**/
+
+    /*
+      PS 俩点：
+      1 选区
+      2 分层
+    */
+    /**
+       webpack css预处理工具
+       w3c标准：html css js
+       https://html.spec.whatwg.org/
+       https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes
+       
+       
+    */
+
+
+  </style>
+</head>
+<body>
+
+<span>sfsfsdf</span>
+<div id="nav">
+  <menu class="menu-container">
+    <span class="menu-item">菜单</span>
+    <footer class="footer">底部部分</footer>
+  </menu>
+  <main>
+    <header>
+      <div class="menu-item">
+        <span>
+          header
+
+          <div class="content">这里是内容</div>
+        </span>
+      </div>
+      <div class="menu-item">
+        <span>header</span>
+      </div>
+      <div class="menu-item">
+        <span data-id="3">header</span>
+      </div>
+      <div class="menu-item">
+        <span>header > > &gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </div>
+    </header>
+    <section>段落</section>
+
+  </main>
+</div>
+
+</body>
+</html>

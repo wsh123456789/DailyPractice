@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .s1 {
+            font-size: 25px;
+            color: rgb(241, 9, 9);
+        }
+    </style>
+    <title>这是网页的标题</title>
+</head>
+
+<body>
+    这是网页的身体<br>
+    <h1 class="s1">标题标签</h1><br>
+    <h1>这是一级标题</h1>
+    <h2>这是二级标题</h2>
+    <h3>这是三级标题</h3>
+    <h4>这是四级标题</h4>
+    <h5>这是五级标题</h5>
+    <h6>这是六级标题</h6>
+    <hr>
+    <h1 class="s1">段落标签</h1><br>
+    <h1>这是文章的标题</h1>
+    <hr>
+    <p>会议要求，持续开展河道、水库、蓄滞洪区等突出问题排查整治，消除风险隐患。密切监视雨情水情汛情，强化预测预报预警和会商研判，及时启动应急响应，科学调度流域水工程，提供抗洪抢险技术支撑。督促水库防汛责任人及时上岗到位，加强水库调度运用监管，严禁违规超汛限水位运行，病险水库主汛期原则上一律空库运行，加强巡查值守和抢险转移，严防垮坝事件发生。加强中小河流洪水和山洪灾害监测预报，及时发出预警，提请基层政府组织危险区人员转移，保障生命安全。严格执行24小时防汛值班制度，第一时间报告重大突发情况。坚持正面宣传，提升社会公众防灾避险意识和自救互救能力。
+    </p>
+
+    <p>今天（6月1日）起上海进入全面恢复正常生产生活秩序阶段。上海市政府发布《致全市人民的感谢信》称，历史会记住为这座城市坚守和付出的所有人！当前，巩固疫情防控成果依然不容放松，加快经济社会恢复任务也日益迫切。我们将全力推动正常生活秩序全面恢复，尽最大努力把疫情耽误的时间、造成的损失抢回来。
+    </p>
+    <hr>
+    <h1 class="s1">文本格式化标签</h1>
+    <b>b标签加粗</b>
+    <strong>strong加粗</strong>
+    <br>
+    <u>u标签下划线</u>
+    <ins>ins标签下划线</ins>
+    <br>
+    <i>i标签倾斜</i>
+    <em>em标签倾斜</em>
+    <br>
+    <s>s标签删除线</s>
+    <del>del删除线</del>
+    <br>
+    <h3 class="s1">总结:上述标签的样式相同，后者在语气强调时使用</h3>
+
+    <h1 class="s1">图片标签</h1>
+    <!-- src属性值为图片路径，alt为图片加载失败时的文字 ，title为鼠标在图片静止时显示的信息-->
+    <!-- width 和 height只需调整一个，另一个属性会等比例缩放 -->
+    <img src="../images/1.jpeg" alt="你网真差" title="这是title文字" width="30%">
+    <hr>
+
+    <h1 class="s1">音频标签</h1>
+    <!-- controls:显示控制播放的控件  autoplay:自动播放(谷歌不支持自动播放)  loop:循环播放 -->
+    <!-- 音频标签目前支持三种格式：MP3,Wav,Ogg -->
+    <audio src="../music/水星记.mp3" controls autoplay loop></audio>
+    <hr>
+
+    <h1 class="s1">视频标签</h1>
+    <!-- controls:显示控制播放的控件  autoplay:自动播放(谷歌浏览器需要配合muted实现静音播放)  loop:循环播放 -->
+    <video src="../video/队长 - 哪里都是你.mkv" controls autoplay muted loop></video>
+    <hr>
+
+    <h1 class="s1">超链接</h1>
+    <!-- target属性设置： _self属性值为默认值，在当前窗口跳转，_blank在新窗口跳转 -->
+    <a href="https://www.baidu.com/" target="_self">点击跳转至百度</a>
+    <br>
+    <a href="./HTML.html" target="_blank">点击跳转至HTML页面</a>
+    <br>
+    <a href="#">空链接，随机跳转</a>
+
+    <hr>
+    <h1 class="s1">列表标签</h1>
+
+    <h2>无序列表</h2>
+    <!-- 无序列表ul用于包裹li标签 li标签表示无序列表的每一项，用于包含每一行的内容 -->
+    <!-- ul中只能包含li标签 -->
+    <ul>
+        <li>榴莲</li>
+        <li>香蕉</li>
+        <li>苹果</li>
+    </ul>
+    <h2>有序列表</h2>
+    <!-- 有序列表ol用于包裹li标签 li标签表示无序列表的每一项，用于包含每一行的内容 -->
+    <!-- ol中只能包含li标签 -->
+    <ol>
+        <li>张三 ：100</li>
+        <li>李四 ：99</li>
+        <li>王五 ：80</li>
+
+    </ol>
+    <h2>自定义列表</h2>
+    <!-- 自定义标签： dl表示自定义列表整体，用于包裹dt/dd标签  -->
+    <!-- dt：表示自定义列表主题 -->
+    <!-- dd：表示针对主题的每一项内容 -->
+    <dl>
+        <dt>水果</dt>
+        <dd>香蕉</dd>
+        <dd>苹果</dd>
+        <dd>西瓜</dd>
+    </dl>
+    <hr>
+    <h1 class="s1">表格标签</h1>
+    <!-- table:表格整体，可用于包裹多个tr -->
+    <!-- tr:表格的每一行，用于包裹td -->
+    <!-- td:表格的单元格，可用于包裹内容 -->
+    <!-- caption: 表格大标题默认在表格顶部剧中位置-->
+    <!-- th:表示一列小标题，默认内部文字加粗并居中显示，一般用于替换td标签 -->
+    <!-- thead:表格头部 tbody:表格主体 tfoot:表格底部 -->
+    <!-- 合并单元格：
+        rowspan="数字" 从上往下跨行合并，只保留最上边元素（手动删除）
+        colspan="数字" 从左往右跨列合并，只保留最左边元素（同上）
+        不能跨thead,tbody,tfoot标签
+    -->
+    <table border="1" width="600" height="400">
+        <caption>
+            <h2>学生成绩表</h2>
+        </caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>张麻子</td>
+                <td rowspan="2">男</td>
+                <td rowspan="2">100</td>
+            </tr>
+
+            <tr>
+                <td>二狗子</td>
+            </tr>
+
+            <tr>
+                <td>小姐姐</td>
+                <td>女</td>
+                <td>150</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <td>总结</td>
+            <td colspan="2">学业有成</td>
+        </tfoot>
+
+    </table>
+
+    <hr>
+    <h1 class="s1">表单标签</h1>
+    <h2 class="s1">input标签：</h2>
+    <!-- input标签：
+            type属性值：
+                text: 文本框，用于输入单行文本
+                password: 密码框，用于输入密码
+                radio: 单选框,用于多选一
+                checkbox: 多选框
+                file：文件选择，用于上传文件
+                submit：提交按钮，用于提交
+                reset：重置按钮，用于重置
+                button: 普通按钮，默认无功能，配合js使用
+        
+        -->
+    <!-- 写什么显示什么 placeholder是文本框占位符-->
+    文本框: <input type="text" placeholder="请输入用户名">
+    <br>
+    <!-- 书写内容隐藏为..... -->
+    密码框: <input type="password" placeholder="请输入密码">
+    <br>
+    单选框：<input type="radio" name="sex" value="男" checked>男
+    <input type="radio" name="sex" value="女">女
+    <br>
+    多选框：<input type="checkbox" name="choice">苹果
+    <input type="checkbox" name="choice">香蕉
+    <input type="checkbox" name="choice">葡萄
+    <br>
+    <!-- multiple可选择上传多个文件 -->
+    文件上传：<input type="file" name="file" multiple>
+    <br>
+    <form action="Demo01.html">
+        用户名：<input type="text" placeholder="请输入用户名"><br>
+        密码框: <input type="password" placeholder="请输入密码"><br>
+        <!-- 按钮 -->
+        提交按钮： <input type="submit" value="提交">
+        重置按钮： <input type="reset" value="重置">
+        按钮： <input type="button" value="点击"><br>
+        
+        <h2 class="s1">button按钮</h2>
+        <!-- button按钮 -->
+        
+        <button type="submit">button提交按钮</button>
+        <button type="reset" >button重置按钮</button>
+        <button type="button">button普通按钮</button>
+        <br>
+    </form>
+    <h2 class="s1">select下拉标签</h2>
+    <!-- 下拉菜单 -->
+    <select>
+        <option>北京</option>
+        <option>上海</option>
+        <option>广州</option>
+        <option selected>深圳</option>
+    </select>
+
+    <h2 class="s1">textarea文本域标签</h2>
+    <!-- 文本域标签 cols设置宽度 rows设置文本域可见行数-->
+    <textarea cols="30" rows="10"></textarea>
+
+    <h2 class="s1">label标签</h2>
+    <!-- label标签：
+    1. label标签包裹文字内容for属性值和input中id属性值一致
+    2. label包裹住所有input标签
+    -->
+    性别：
+    <input type="radio" id="1" name="sex"><label for="1">男</label>
+    <label><input type="radio" name="sex">女</label>
+
+    <h2 class="s1">语义化标签</h2>
+    <!-- div标签 独占一行 -->
+    普通文字
+    <div>这是div标签</div>
+    <div>这是div标签</div>
+    <!-- span标签 -->
+    <span>这是span标签</span>
+    <span>这是span标签</span>
+
+    <h2 class="s1">字符实体标签：</h2>
+    <!-- 网页默认只识别一个空格 空格字符 &nbsp; -->
+    这是html文档，现在学习&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;字符实体标签
+
+    <hr>
+
+   
+</body>
+
+</html>

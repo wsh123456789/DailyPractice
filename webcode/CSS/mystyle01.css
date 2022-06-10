@@ -1,0 +1,163 @@
+/* 标签选择器：
+    例如：a,p,div,h1等标签;
+    直接进行样式定义，所有的此类标签都会发生改变
+
+ */
+p {
+    color: red;
+    font-size: 20px;
+    background-color: rgb(201, 196, 205);
+}
+/* 类选择器
+类名可以由数字，字母，下划线，中划线组成，但不能以数字或中划线开头;
+
+一个标签可以有多个类名，类名之间用空格隔开;
+例如：
+<p class="one size">这个p是什么颜色呢</p>
+
+类名可以重复，一个类选择器可以同时选中多个标签;
+
+
+
+
+    定义：
+    .类名{
+        css属性名:属性值;
+     }
+
+
+      */
+.one{
+    color: orange;
+}
+.size{
+    font-size:20px;
+}
+/* id选择器：
+通过寻找id属性值，对其进行样式设置
+
+id属性值在一个页面中是唯一的，不可重复的
+一个标签只能有一个id属性值
+一个id选择器只能选中一个标签
+
+    定义：
+    #id属性值{
+        css属性名:属性值;
+     } */
+
+#id01{
+    color: aqua;
+    background-color: black;
+    font-size: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+/*通配符选择器
+对所有标签设置样式
+一般用以消除默认的内外边距值(margin,padding)
+
+
+定义：
+*{
+     css属性名:属性值;
+    }
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 字体和文本样式 */
+
+.font{
+    /* 2.1.字体样式
+       字号：font-size(谷歌默认16px)
+       字体粗细：font-weight(normal是正常属性为400，bold为加粗700)
+       字体样式：font-style
+       字体类型：font-family
+       字体类型: font属性连写
+
+
+     */
+
+    font-size: 20px;
+    /* font-weight: 700; */
+    font-weight: 400;
+    /* 字体样式：font-style
+            normal为正常
+            italic为倾斜
+     */
+    font-style: italic;
+
+    /* 2.2字体类型 
+       无衬线字体(sans-serif):黑体,Arial,常用于网页中
+       衬线字体(serif):宋体,Times New Roman ,常用于报刊书籍中
+       等宽字体(monospace): Consolas,fira code,常用于一般的代码编写
+
+    */
+    font-family: 微软雅黑,黑体,sans-serif;
+
+}
+
+    /* 字体类型: font属性连写 (复合属性)
+    只能省略前两个
+        font: style  weight size 字体 ;
+
+        .font{
+            font: italic 700 60px 宋体;
+        }
+    
+    */
+
+
+/* 2.3文本样式 */
+
+/* 
+    首行缩进： text-indent(2em为两个字的大小)
+    文本水平对齐方式：text-align(center居中对齐,left左对齐,right右对齐)
+        对文本,span标签,input标签，img标签需要给以上元素的父元素设置
+    文本修饰： text-decoration(underline下划线,line-through删除线,overline上划线,none无装饰线常用于清除a标签默认的下划线)
+ */
+
+
+ /* 首行缩进： text-indent(2em为两个字的大小) */
+.text{
+
+    text-indent: 2em;
+}
+/* 文本水平对齐方式：text-align(center居中对齐,left左对齐,right右对齐)
+        对文本,span标签,input标签，img标签需要给以上元素的父元素设置 */
+body{
+    text-align: center;
+}
+/* 文本修饰： text-decoration(underline下划线,line-through删除线,overline上划线,none无装饰线常用于清除a标签默认的下划线) */
+.tdu{
+    text-decoration: underline;
+}
+
+.tdl{
+    text-decoration: line-through;
+}
+
+.tdo{
+    text-decoration: overline;
+}
+.tdn{
+    text-decoration: none;
+}
+
+/* 3.1 行高 */
+/* 
+    line-height
+    属性值为 倍数 或者 数字加单位
+    font属性设置
+    font: style weight size/line-height 字体;
+     */
+.tlh{
+    /* line-height: 1.5; */
+    font: italic 700 16px/2 宋体
+
+}
