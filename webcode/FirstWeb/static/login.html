@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆界面</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script>
+        function login() {
+            location.href = "./index.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="topnav">
+        <div>量化交易</div>
+    </div>
+
+    <!-- <form id="contentForm" method="post" action="index.html"> -->
+    <div id="contentForm">
+        <h3>请输入登录的用户名和密码</h3>
+        <br><br>
+        <div style="text-align: center;">
+            <table style="margin: auto;border-spacing: 0px 0px;">
+                <tr>
+                    <label>
+                        <td><img src="images/user.png" alt="用户名" title="用户名" width="20px"></td>
+                        <td> <input type="text" name="username" id="username" /></td>
+                    </label>
+                </tr>
+            </table>
+            <br>
+            <table style="margin: auto;border-spacing: 0px 0px;">
+                <tr>
+                    <label>
+                        <td><img src="images/lock.png" alt="密码" title="密码" width="20px"></td>
+                        <td> <input type="password" name="password" id="password" /></td>
+                    </label>
+                </tr>
+            </table>
+        </div>
+        <br><br>
+        <div>
+            <input onclick="login()" type="submit" value="登录" style="height: 30px; width: 50px;" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="重置" style="height: 30px; width: 50px;" />
+        </div>
+    </div>
+    <!-- </form> -->
+</body>
+
+</html>
