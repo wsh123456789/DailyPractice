@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .input-01 {
+            box-sizing: border-box;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        .input-02 {
+            background: pink;
+            cursor: text;
+        }
+
+        .input-03 {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            cursor: pointer;
+        }
+
+        .input-04 {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            cursor: move;
+        }
+
+        .box-01 {
+            display: inline-block;
+            /* 如果有一个值没设置，那么和对角一致 */
+            border-radius: 10px 20px 40px 80px;
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+
+        .box-02 {
+            display: inline-block;
+            /* overflow: visible; */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            overflow: auto;
+            width: 200px;
+            height: 200px;
+            background: pink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>垂直对齐方式 </h2>
+    <div>基线 : 浏览器文字类型元素在排版中存在用于对齐的基线(baseline)</div>
+    <div>属性名 : vertical-aline</div>
+    <dl>
+        <dt>属性值 : </dt>
+        <dd>baseline (默认,基线对齐)</dd>
+        <dd>top 顶部对齐</dd>
+        <dd>middle 中部对齐</dd>
+        <dd>bottom 底部对齐</dd>
+    </dl>
+    <h3>案例 :</h3>
+    <input class="input-01" type="text">
+    <input class="input-01" type="button" value="案例">
+    <hr /><br />
+    <h2>光标类型</h2>
+    <div>场景 : 设置鼠标光标在元素上显示的样式</div>
+    <div>属性名 : cursor</div>
+    <dl>
+        <dt>属性值 :</dt>
+        <dd>default : 默认值,通常是箭头</dd>
+        <dd>pointer : 小手效果,提示用户可以点击</dd>
+        <dd>text : 工字形,提示用户可以选择文字</dd>
+        <dd>move : 十字光标,提示用户可以移动</dd>
+    </dl>
+    <h3>案例 :</h3>
+    <input class="input-02" type="text">
+    <input class="input-03" type="button" value="案例">
+    <input class="input-04" type="button" value="案例">
+    <hr /><br />
+    <h2>边框圆角</h2>
+    <div>场景 : 让四个角变得圆润,增加页面细节</div>
+    <div>属性名 : border-radius</div>
+    <div>常见取值 : 数字+px、百分比</div>
+    <h3>案例 :</h3>
+    <div class="box-01"></div>
+    <hr /><br />
+    <h2>overflow溢出部分显示效果</h2>
+    <div>溢出部分 : 指的是盒子的内部内容所超出盒子范围的区域</div>
+    <div>场景 : 控制内容溢出部分的显示效果,如:显示、隐藏、滚动条......</div>
+    <div>属性值 : overflow</div>
+    <dl>
+        <dt>属性值 :</dt>
+        <dd>visible : 默认值,溢出部分可见</dd>
+        <dd>hidden : 溢出部分隐藏</dd>
+        <dd>scroll : 无论是否溢出,都显示滚动条</dd>
+        <dd>auto : 根据是否溢出,自动显示或隐藏滚动条</dd>
+    </dl>
+    <p class="box-02">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+    </p>
+    <hr /><br />
+    <h3>元素本身隐藏</h3>
+    <div>场景 : 让某元素本身在屏幕中不可见。如 : 鼠标:hover之后元素隐藏</div>
+    <dl>
+        <dt>属性名 : 属性值</dt>
+        <dd>display : block 显示</dd>
+        <dd>visibility : hidden 占位隐藏</dd>
+        <dd>display : none 不占位隐藏</dd>
+        <dd>区别 : 第一个是占位隐藏,第二个为不占位隐藏</dd>
+    </dl>
+    <h3>元素整体透明度</h3>
+    <div>场景 : 让某元素整体一起变透明</div>
+</body>
+
+</html>
